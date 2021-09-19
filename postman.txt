@@ -1,0 +1,52 @@
+// CREATE MOVIE
+
+curl -X POST \
+  http://localhost:4000/api/movie \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 92cffbee-4657-ae4e-d845-547a05b39bc1' \
+  -d '{
+"name": "RAMU123456789",
+"img": "https://bit.ly/2Pzczlb",
+"summary": "Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America, and Bruce Banner -- must figure out a way to bring back their vanquished allies for an epic showdown with Thanos -- the evil demigod who decimated the planet and the universe."
+}'
+
+// GET ALL MOVIE
+
+curl -X POST \
+  http://localhost:4000/api/movie \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 0039274e-8e63-4715-b195-2163863b4eaf' \
+  -d '{
+"name": "RAMU123456789",
+"img": "https://bit.ly/2Pzczlb",
+"summary": "Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America, and Bruce Banner -- must figure out a way to bring back their vanquished allies for an epic showdown with Thanos -- the evil demigod who decimated the planet and the universe."
+}'
+
+// GET MOVIE BY ID
+
+curl -X GET \
+  http://localhost:4000/api/movie/61471db790f13f49d1cca9d7 \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: f4215333-253c-9428-6842-afd530f61ad0'
+
+// UPDATE MOVIE
+
+curl -X PUT \
+  http://localhost:4000/api/movie/61471db790f13f49d1cca9d7 \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: c01abb95-2678-5876-95af-63bccd44e136' \
+  -d '{
+    "name": "Shyam",
+    "img": "https://bit.ly/2IcnSwz",
+    "summary": "Harry Potter and Dumbledore'\''s warning about the return of Lord Voldemort is not heeded by the wizard authorities who, in turn, look to undermine Dumbledore'\''s authority at Hogwarts and discredit Harry."
+}'
+
+// DELETE MOVIE
+
+curl -X DELETE \
+  http://localhost:4000/api/movie/61471db790f13f49d1cca9d7 \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 6d5c2f58-889c-bdb5-9819-0a743d544a67'
